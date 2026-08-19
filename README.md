@@ -34,21 +34,3 @@ Output is written to `_site/`.
 ## Categories
 
 The site organizes recipes into three groups and fifteen categories, defined in `src/_data/categories.js`. Recipes assign themselves to one category via the `category:` frontmatter field, and to zero or more seasonal collections via `tags:` (Holiday, Sunday Supper, Potluck, Canning Season) defined in `src/_data/collections.js`.
-
-## Deploying to a custom domain
-
-`src/CNAME` contains `rosesrecipes.com` and is copied straight into the built site so GitHub Pages picks it up.
-
-DNS records at Namecheap:
-
-- `A` `@` `185.199.108.153`
-- `A` `@` `185.199.109.153`
-- `A` `@` `185.199.110.153`
-- `A` `@` `185.199.111.153`
-- `CNAME` `www` `<github-username>.github.io.`
-
-In the GitHub repo settings, enable Pages, set the custom domain to `rosesrecipes.com`, and check "Enforce HTTPS" once the Let's Encrypt certificate provisions.
-
-## Waitlist form
-
-The cookbook waitlist form posts to whichever email service you set in `src/_data/site.json` under `waitlist.endpoint`. The default value there is a placeholder. Replace it with a real Buttondown, ConvertKit, or MailerLite embed URL before launch.
