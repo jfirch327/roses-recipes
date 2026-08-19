@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="wordmark" href="/">
+      <span>Grandma Rose's Recipes</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="primary" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/recipe-box/" {% if page.url == "/recipe-box/" %}aria-current="page"{% endif %}>Recipe Box</a></li>
+        <li><a href="/ingredient-index/" {% if page.url == "/ingredient-index/" %}aria-current="page"{% endif %}>Ingredients</a></li>
+        <li><a href="/collections/" {% if page.url and "/collections/" in page.url %}aria-current="page"{% endif %}>Seasonal</a></li>
+        <li><a href="/cookbook/" {% if page.url == "/cookbook/" %}aria-current="page"{% endif %}>Cookbook</a></li>
+        <li><a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__utility">
+      <button type="button" class="header-icon-btn" id="searchToggle" aria-expanded="false" aria-controls="siteSearchPanel" aria-label="Search recipes">
+        {% svg "icon-search" %}
+      </button>
+      <a class="nav-keepers" href="/keepers/" {% if page.url == "/keepers/" %}aria-current="page"{% endif %} aria-label="Your saved recipes">
+        <span class="nav-keepers__icon" aria-hidden="true">{% svg "icon-save" %}</span>
+        <span class="nav-keepers__label">Saved</span>
+        <span class="nav-keepers__count" data-keepers-count hidden>0</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-search-panel" id="siteSearchPanel" hidden>
+    <div class="wrap">
+      <div class="site-search-panel__inner">
+        <span class="site-search-panel__icon" aria-hidden="true">{% svg "icon-search" %}</span>
+        <input type="search" id="siteSearch" placeholder="Search recipes, categories, and ingredients…" aria-label="Search recipes">
+        <button type="button" class="site-search-panel__close" id="searchClose" aria-label="Close search">×</button>
+      </div>
+      <div id="siteSearchResults" class="site-search-panel__results" hidden></div>
+    </div>
+  </div>
+</header>

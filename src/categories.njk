@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: categories
+  size: 1
+  alias: category
+permalink: "/{{ category.slug }}/"
+eleventyComputed:
+  title: "{{ category.name }}"
+  description: "{{ category.blurb }} Family recipes in {{ category.name | lower }} from Grandma Rose's midwestern Ohio kitchen."
+---
+{% set catRecipes = collections.recipe | recipesIn(category.slug) %}
+{% set pick = catRecipes | featuredOne %}
+
+<section class="wrap-narrow">
+  <div class="center" style="margin-bottom:2rem;">
+    <div style="width:88px;margin:0 auto 1rem;color:var(--sage);">{% svg category.glyph %}</div>
+    <p class="subtitle">{{ category.group | lower }} from the tin box</p>
+    <h1 class="display">{{ category.name }}</h1>
+  </div>
+  <p class="lead-p">{{ category.blurb }} You'll find the rest of the <a href="/recipe-box/">recipe box</a> a click away, and if you cook by what's in the pantry, the <a href="/ingredient-index/">ingredient index</a> will point you to whichever of Rose's cards use what you have on the counter today.</p>
+</section>
+
+<div class="sprig-rule" aria-hidden="true">{% svg "sprig" %}</div>
+
+{% if pick %}
+<section class="wrap">
+  <div class="featured reveal" style="margin-bottom:2.5rem;">
+    <div class="featured__dish" aria-hidden="true">{% dish pick.data.dishSketch %}</div>
+    <div>
+      <p class="featured__eyebrow"><span class="cooks-pick">Cook's pick</span></p>
+      <h2 class="featured__title"><a href="{{ pick.url }}" style="color:inherit;text-decoration:none;">{{ pick.data.title }}</a></h2>
+      <p class="featured__quote">{{ pick.data.description }}</p>
+      <a class="btn btn--secondary" href="{{ pick.url }}"><span>Read the recipe</span></a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="wrap">
+  {% if catRecipes | length %}
+  <div class="filter-chips" role="toolbar" aria-label="Filter recipes">
+    <button type="button" class="is-active" data-filter="all">All</button>
+    <button type="button" data-filter="sunday-supper">Sunday supper</button>
+    <button type="button" data-filter="potluck">Potluck</button>
+    <button type="button" data-filter="holiday">Holiday</button>
+    <button type="button" data-filter="quick">Quick (≤30 min)</button>
+    <button type="button" data-filter="slow">Slow (≥2 hr)</button>
+    <button type="button" data-filter="canning-season">Canning season</button>
+  </div>
+  <div class="tile-grid">
+    {% for r in catRecipes %}
+      {% set recipe = r %}
+      {% include "partials/recipe-card.njk" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="center" style="padding:3rem 1rem;">
+    <div style="max-width:280px;margin:0 auto 1.5rem;color:var(--sage);">{% svg "empty-pie-tin" %}</div>
+    <p class="muted">Nothing in this drawer of the tin box yet. Check back soon.</p>
+  </div>
+  {% endif %}
+</section>
+
+<div class="wrap-narrow">
+  {% set title = category.name + " recipes" %}
+  {% include "partials/cookbook-cta.njk" %}
+</div>

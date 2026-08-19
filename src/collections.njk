@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: seasons
+  size: 1
+  alias: coll
+permalink: "/collections/{{ coll.slug }}/"
+eleventyComputed:
+  title: "{{ coll.name }}"
+  description: "{{ coll.blurb }} From Grandma Rose's family recipe collection."
+---
+{% set collRecipes = collections.recipe | recipesTagged(coll.slug) %}
+
+<section class="wrap-narrow">
+  <div class="center" style="margin-bottom:2rem;">
+    <div style="width:96px;margin:0 auto 1rem;color:var(--red);">{% svg coll.glyph %}</div>
+    <p class="subtitle">Seasonal collection</p>
+    <h1>{{ coll.name }}</h1>
+    <p class="lede muted">{{ coll.blurb }}</p>
+  </div>
+</section>
+
+<section class="wrap">
+  {% if collRecipes | length %}
+  <div class="tile-grid">
+    {% for r in collRecipes %}
+      {% set recipe = r %}
+      {% include "partials/recipe-card.njk" %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="center" style="padding:3rem 1rem;">
+    <div style="max-width:280px;margin:0 auto 1.5rem;color:var(--red-faded);">{% svg "empty-pie-tin" %}</div>
+    <p class="muted">Nothing tagged for this collection yet. More recipes will land here as the tin box fills out.</p>
+  </div>
+  {% endif %}
+</section>

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 400" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Bound book, quiet line drawing, no fake 3D -->
+  <rect x="60" y="50" width="200" height="300" rx="4"/>
+  <!-- Spine indication -->
+  <line x1="80" y1="50" x2="80" y2="350"/>
+  <!-- Cover ornament rectangle -->
+  <rect x="100" y="90" width="140" height="220"/>
+  <!-- Title on cover -->
+  <text x="170" y="150" font-family="Fraunces, serif" font-style="italic" font-size="14" font-weight="500" fill="currentColor" stroke="none" text-anchor="middle">Grandma Rose's</text>
+  <text x="170" y="180" font-family="Caveat, cursive" font-size="24" fill="currentColor" stroke="none" text-anchor="middle">Classic Midwestern</text>
+  <text x="170" y="210" font-family="Fraunces, serif" font-style="italic" font-size="14" font-weight="500" fill="currentColor" stroke="none" text-anchor="middle">Cookbook</text>
+  <!-- Wheat stalk beneath title -->
+  <g transform="translate(170 260)" stroke-width="1.5">
+    <line x1="0" y1="-20" x2="0" y2="20"/>
+    <path d="M0 -12 Q-8 -14 -10 -10 M0 -12 Q8 -14 10 -10"/>
+    <path d="M0 -4 Q-9 -6 -11 -2 M0 -4 Q9 -6 11 -2"/>
+    <path d="M0 4 Q-9 2 -11 6 M0 4 Q9 2 11 6"/>
+    <path d="M0 12 Q-8 10 -10 14 M0 12 Q8 10 10 14"/>
+  </g>
+  <!-- Bottom shadow line (page edge suggestion, subtle) -->
+  <line x1="60" y1="352" x2="260" y2="352" opacity="0.4"/>
+</svg>

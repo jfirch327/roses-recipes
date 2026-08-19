@@ -1,0 +1,18 @@
+{
+  "title": "Grandma Rose's Recipes",
+  "shortTitle": "Grandma Rose's",
+  "tagline": "Handwritten recipes from a midwestern Ohio farm kitchen.",
+  "description": "A family recipe collection from Grandma Rose. Handwritten cards from a midwestern Ohio farm kitchen, typed out and gathered here for the family to share and use.",
+  "url": "https://rosesrecipes.com",
+  "author": "The family of Grandma Rose",
+  "authorName": "Grandma Rose",
+  "familyDedication": "For the family. From Grandma Rose's kitchen to yours.",
+  "heroImage": "",
+  "heroImageAlt": "An old red midwestern barn standing next to a red farmhouse on an Ohio farm at dusk.",
+  "heroImageNote": "Drop a photo at src/assets/images/site/hero-barn.jpg and set heroImage to /assets/images/site/hero-barn.jpg to replace the placeholder illustration.",
+  "waitlist": {
+    "provider": "buttondown",
+    "endpoint": "https://buttondown.email/api/emails/embed-subscribe/rosesrecipes",
+    "note": "Placeholder endpoint. Replace with your real Buttondown or ConvertKit form URL before launch."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "roses-recipes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Grandma Rose's Recipes — a family recipe site built with Eleventy and deployed via GitHub Pages.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --quiet",
+    "clean": "node -e \"require('fs').rmSync('_site', { recursive: true, force: true })\"",
+    "convert-images": "node scripts/convert-images.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.33.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "markdown-it": "^15.0.0"
+  }
+}

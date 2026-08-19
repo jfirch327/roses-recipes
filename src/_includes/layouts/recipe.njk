@@ -1,0 +1,200 @@
+---
+layout: layouts/base.njk
+---
+{% set catSlug = category %}
+{% set catName = catSlug | categoryName %}
+{% set flatIng = ingredients | ingredientsFlat %}
+{% set recipeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": title,
+  "description": description,
+  "image": (site.url + handwrittenImage) if handwrittenImage else null,
+  "author": { "@type": "Person", "name": (attributedTo or site.authorName) },
+  "datePublished": datePublished | isoDate,
+  "recipeCategory": catName,
+  "recipeYield": recipeYield or yield,
+  "prepTime": prepTime,
+  "cookTime": cookTime,
+  "totalTime": totalTime,
+  "recipeIngredient": flatIng,
+  "recipeInstructions": instructions | instructionsToSchema
+} %}
+
+<script type="application/ld+json">{{ recipeJsonLd | dump | safe }}</script>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<div class="wrap-recipe">
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+  <span class="breadcrumbs__sep">·</span>
+  <a href="/recipe-box/">Recipe Box</a>
+  <span class="breadcrumbs__sep">·</span>
+  <a href="/{{ catSlug }}/">{{ catName }}</a>
+</nav>
+
+<article class="recipe" data-slug="{{ page.fileSlug }}" data-title="{{ title }}">
+
+  <header class="recipe__header">
+    <a class="recipe__badge" href="/{{ catSlug }}/">
+      <span aria-hidden="true">{% svg "sprig" %}</span>
+      <span>{{ catName }}</span>
+    </a>
+    <h1>{{ title }}</h1>
+    <div class="recipe__byline">
+      <span class="byline">{% if attributedTo %}From {{ attributedTo }}'s recipe{% else %}From Rose's kitchen{% endif %}</span>
+    </div>
+    {% if description %}<p class="recipe__lede">{{ description }}</p>{% endif %}
+    {% if dedication %}<p class="dedication">{{ dedication }}</p>{% endif %}
+
+    <div class="recipe__meta">
+      {% if totalTime %}
+      <span class="recipe__meta-item">{% svg "icon-clock" %}<span>{{ totalTime | readableTime }} total</span></span>
+      {% endif %}
+      {% if prepTime %}
+      <span class="recipe__meta-item">{% svg "icon-clock" %}<span>{{ prepTime | readableTime }} prep</span></span>
+      {% endif %}
+      {% if cookTime %}
+      <span class="recipe__meta-item">{% svg "icon-clock" %}<span>{{ cookTime | readableTime }} in the oven</span></span>
+      {% endif %}
+      {% if yield %}
+      <span class="recipe__meta-item">
+        {% svg "icon-yield" %}
+        <span data-yield-label>{{ yield }}</span>
+      </span>
+      {% endif %}
+    </div>
+
+    {% if tags and tags | length %}
+    <div class="recipe__meta" style="margin-top:0.75rem;">
+      {% for tag in tags %}
+        {% if tag != "recipe" %}
+          <a class="tag" href="/collections/{{ tag }}/">{{ tag | collectionName }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="utility-bar">
+      <button type="button" class="icon-btn" data-jump>{% svg "icon-jump" %}<span>Jump to recipe</span></button>
+      <button type="button" class="icon-btn" data-savepdf>{% svg "icon-pdf" %}<span>Save PDF</span></button>
+      <button type="button" class="icon-btn" data-print>{% svg "icon-print" %}<span>Print</span></button>
+      <button type="button" class="icon-btn" data-save>{% svg "icon-save" %}<span>Save</span></button>
+    </div>
+  </header>
+
+  {% if handwrittenImage %}
+  <div class="handwritten">
+    <button type="button" class="handwritten__button" data-lightbox="{{ handwrittenImage }}" aria-label="Open the handwritten card">
+      <img src="{{ handwrittenImage | replace('.jpg', '-thumb.jpg') }}" alt="{{ handwrittenAlt or ('Grandma Rose\'s handwritten card for ' + title + '.') }}" loading="lazy">
+    </button>
+    <p class="handwritten__caption">as written in Rose's hand</p>
+  </div>
+  {% endif %}
+
+  {% if content %}
+  <div class="recipe__intro dropcap reveal">
+    {{ content | safe }}
+  </div>
+  {% endif %}
+
+  <div class="sprig-rule" aria-hidden="true">{% svg "sprig" %}</div>
+
+  <div class="recipe__body" id="recipe-body">
+    <section class="recipe__ingredients reveal" aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Ingredients</h2>
+
+      <div class="scaler-panel" aria-label="Recipe scale">
+        <div class="scaler-panel__label">
+          <p class="scaler-panel__title">Scale the recipe</p>
+          <p class="scaler-panel__meta">Makes <span data-yield-label>{{ yield or recipeYield }}</span> at <span data-scale-word>full size</span></p>
+        </div>
+        <span class="scaler" data-scaler>
+          <button type="button" data-scale-down aria-label="Smaller batch">−</button>
+          <span class="scaler__val" data-scale-val>×1</span>
+          <button type="button" data-scale-up aria-label="Bigger batch">+</button>
+        </span>
+      </div>
+
+      <p class="ingredients__hint muted" style="font-size:0.85rem;margin:0 0 1rem;">Tap the boxes to check ingredients off as you go.</p>
+      {% if ingredients[0].group %}
+        {% for group in ingredients %}
+          <div class="ingredient-group">
+            <h3>{{ group.group }}</h3>
+            <ul class="ingredient-list">
+              {% for item in group.items %}
+              <li><label><input type="checkbox"><span data-ingredient>{{ item | ingredientQty | safe }}</span></label></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      {% else %}
+        <ul class="ingredient-list">
+          {% for item in ingredients %}
+          <li><label><input type="checkbox"><span data-ingredient>{{ item | ingredientQty | safe }}</span></label></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <button type="button" class="ingredients__clear" data-clear-checks hidden>Clear checks</button>
+    </section>
+
+    <section class="recipe__instructions reveal" aria-labelledby="instructions-heading">
+      <h2 id="instructions-heading">How to make it</h2>
+      <ol class="instruction-list">
+        {% for step in instructions %}
+          <li data-step="{{ loop.index0 }}">
+            <span class="step__num">{% medallion loop.index %}</span>
+            <span class="step__text">{{ step }}</span>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </div>
+
+  {% if notes %}
+  <aside class="recipe__notes reveal">
+    <h2>A note from Rose</h2>
+    {{ notes | md | safe }}
+  </aside>
+  {% endif %}
+
+  {% if relatedRecipe %}
+  <div class="center" style="margin-top:2rem;color:var(--ash);">
+    Pair this with <a href="/{{ relatedRecipe.category }}/{{ relatedRecipe.slug }}/">{{ relatedRecipe.title }}</a> from the tin box.
+  </div>
+  {% endif %}
+
+  {% include "partials/see-also.njk" %}
+
+  {% include "partials/cookbook-cta.njk" %}
+
+  {% set relatedSet = collections.recipe | related(catSlug, tags, page.url, 3) %}
+  {% if relatedSet | length %}
+  <section class="related reveal" aria-labelledby="related-heading">
+    <div class="sprig-rule" aria-hidden="true">{% svg "sprig" %}</div>
+    <h2 id="related-heading">More from the tin box</h2>
+    <div class="tile-grid">
+      {% for r in relatedSet %}
+        {% set recipe = r %}
+        {% include "partials/recipe-card.njk" %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <p class="recipe__foot">
+    Handwritten by Rose. Typed by the family.
+    <span class="back"><a href="/{{ catSlug }}/">← Back to {{ catName | lower }}</a></span>
+  </p>
+
+  <p class="recipe__url" style="display:none;">{{ site.url }}{{ page.url }}</p>
+</article>
+
+</div>
+
+<dialog class="lightbox" id="lightbox">
+  <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close">×</button>
+  <img id="lightboxImg" alt="">
+</dialog>

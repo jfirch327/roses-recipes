@@ -1,0 +1,106 @@
+<svg viewBox="0 0 520 400" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Sky / distant hills -->
+  <path d="M0 240 Q80 210 170 224 Q260 240 340 220 Q420 202 520 224" opacity="0.5"/>
+  <path d="M0 260 Q90 234 180 248 Q270 260 360 244 Q440 232 520 250" opacity="0.35"/>
+
+  <!-- Sun -->
+  <circle cx="430" cy="70" r="18" opacity="0.55"/>
+  <line x1="430" y1="40" x2="430" y2="46" opacity="0.5"/>
+  <line x1="430" y1="94" x2="430" y2="100" opacity="0.5"/>
+  <line x1="400" y1="70" x2="406" y2="70" opacity="0.5"/>
+  <line x1="454" y1="70" x2="460" y2="70" opacity="0.5"/>
+
+  <!-- Barn (left) -->
+  <g>
+    <path d="M40 320 L40 200 L100 150 L160 200 L160 320 Z" fill="#8B3A2E" fill-opacity="0.85" stroke="#5B241C"/>
+    <path d="M40 200 L100 150 L160 200" stroke="#5B241C"/>
+    <!-- Barn roof / gambrel -->
+    <path d="M40 200 L60 175 L100 150 L140 175 L160 200" stroke="#5B241C"/>
+    <!-- Barn doors -->
+    <rect x="80" y="240" width="40" height="80" fill="#5B241C" stroke="#3A1712"/>
+    <line x1="100" y1="240" x2="100" y2="320" stroke="#F1E9D6" stroke-width="1.2"/>
+    <!-- Barn hayloft window -->
+    <rect x="90" y="180" width="20" height="24" fill="#F1E9D6" stroke="#3A1712"/>
+    <line x1="100" y1="180" x2="100" y2="204" stroke="#3A1712" stroke-width="1"/>
+    <line x1="90" y1="192" x2="110" y2="192" stroke="#3A1712" stroke-width="1"/>
+    <!-- White cross on doors -->
+    <path d="M80 260 L120 300 M120 260 L80 300" stroke="#F1E9D6" stroke-width="1.6" fill="none"/>
+    <!-- Cupola on top -->
+    <rect x="94" y="132" width="12" height="14" fill="#5B241C"/>
+    <path d="M92 132 L100 122 L108 132 Z" fill="#5B241C"/>
+    <line x1="100" y1="122" x2="100" y2="115" stroke="#5B241C"/>
+    <!-- Silo (right of barn) -->
+    <path d="M175 320 L175 195 Q175 180 190 180 Q205 180 205 195 L205 320 Z" fill="#B8695C" fill-opacity="0.8" stroke="#5B241C"/>
+    <ellipse cx="190" cy="180" rx="15" ry="6" fill="#8B3A2E" stroke="#5B241C"/>
+    <line x1="175" y1="210" x2="205" y2="210" stroke="#5B241C" stroke-width="0.9" opacity="0.7"/>
+    <line x1="175" y1="240" x2="205" y2="240" stroke="#5B241C" stroke-width="0.9" opacity="0.7"/>
+    <line x1="175" y1="270" x2="205" y2="270" stroke="#5B241C" stroke-width="0.9" opacity="0.7"/>
+  </g>
+
+  <!-- Fence (between barn and house) -->
+  <g stroke="#3B2A1D" opacity="0.6">
+    <line x1="220" y1="290" x2="340" y2="290"/>
+    <line x1="220" y1="305" x2="340" y2="305"/>
+    <line x1="230" y1="285" x2="230" y2="315"/>
+    <line x1="255" y1="285" x2="255" y2="315"/>
+    <line x1="280" y1="285" x2="280" y2="315"/>
+    <line x1="305" y1="285" x2="305" y2="315"/>
+    <line x1="330" y1="285" x2="330" y2="315"/>
+  </g>
+
+  <!-- Farmhouse (right) — red brick with white trim -->
+  <g>
+    <!-- Body -->
+    <rect x="340" y="240" width="150" height="80" fill="#B8695C" fill-opacity="0.85" stroke="#5B241C"/>
+    <!-- Roof -->
+    <path d="M330 240 L415 180 L500 240 Z" fill="#8B3A2E" stroke="#5B241C"/>
+    <!-- Chimney -->
+    <rect x="460" y="200" width="14" height="34" fill="#5B241C"/>
+    <line x1="460" y1="208" x2="474" y2="208" stroke="#3A1712"/>
+    <!-- Porch -->
+    <rect x="340" y="300" width="150" height="20" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="360" y1="300" x2="360" y2="278" stroke="#5B241C"/>
+    <line x1="470" y1="300" x2="470" y2="278" stroke="#5B241C"/>
+    <path d="M355 278 L475 278" stroke="#5B241C"/>
+    <!-- Front door -->
+    <rect x="405" y="266" width="20" height="34" fill="#5B241C" stroke="#3A1712"/>
+    <circle cx="421" cy="284" r="0.9" fill="#F1E9D6"/>
+    <!-- Windows -->
+    <rect x="360" y="258" width="24" height="26" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="372" y1="258" x2="372" y2="284" stroke="#5B241C" stroke-width="0.9"/>
+    <line x1="360" y1="271" x2="384" y2="271" stroke="#5B241C" stroke-width="0.9"/>
+    <rect x="446" y="258" width="24" height="26" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="458" y1="258" x2="458" y2="284" stroke="#5B241C" stroke-width="0.9"/>
+    <line x1="446" y1="271" x2="470" y2="271" stroke="#5B241C" stroke-width="0.9"/>
+    <!-- Upstairs gable window -->
+    <rect x="404" y="210" width="20" height="22" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="414" y1="210" x2="414" y2="232" stroke="#5B241C" stroke-width="0.9"/>
+  </g>
+
+  <!-- Ground line -->
+  <path d="M0 320 L520 320" stroke="#3B2A1D"/>
+  <!-- Grass tufts -->
+  <g stroke="#5D7256" opacity="0.7">
+    <path d="M20 325 L18 318 M24 326 L26 320 M22 328 L22 322"/>
+    <path d="M220 325 L218 318 M224 326 L226 320"/>
+    <path d="M300 328 L298 322 M304 328 L306 322 M308 330 L308 324"/>
+    <path d="M510 325 L508 318 M514 326 L516 320"/>
+  </g>
+
+  <!-- Tree (right of house) -->
+  <g>
+    <path d="M500 320 L500 260" stroke="#3B2A1D" stroke-width="2.2"/>
+    <circle cx="500" cy="248" r="24" fill="#7A9270" fill-opacity="0.8" stroke="#5D7256"/>
+    <circle cx="486" cy="256" r="16" fill="#7A9270" fill-opacity="0.6" stroke="#5D7256"/>
+    <circle cx="514" cy="256" r="16" fill="#7A9270" fill-opacity="0.6" stroke="#5D7256"/>
+  </g>
+
+  <!-- Small figure by the porch — a hint of Rose -->
+  <g stroke="#3B2A1D">
+    <circle cx="380" cy="292" r="3" fill="#F1E9D6"/>
+    <path d="M380 295 L380 306 M377 300 L383 300 M378 306 L376 314 M382 306 L384 314"/>
+  </g>
+
+  <!-- Fine paper edge below scene -->
+  <line x1="0" y1="380" x2="520" y2="380" opacity="0.15" stroke-dasharray="1 3"/>
+</svg>

@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+permalink: /ingredient-index/
+title: "Ingredient index"
+description: "Every ingredient across every recipe in Grandma Rose's tin box, alphabetized, with links to the recipes that use each one."
+---
+<section class="wrap-narrow center">
+  <p class="subtitle">A–Z</p>
+  <h1 class="display">Ingredient index</h1>
+  <p class="dedication">Every ingredient in the tin box, sorted so you can find what to cook by what you have.</p>
+</section>
+
+{% set letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"] %}
+{% set indexMap = collections.recipe | ingredientMap %}
+
+<div class="wrap">
+  <nav class="ingredient-index__jump" aria-label="Jump to letter">
+    {% for L in letters %}
+      {% if indexMap[L] %}<a href="#letter-{{ L }}">{{ L }}</a>{% endif %}
+    {% endfor %}
+  </nav>
+</div>
+
+<div class="wrap">
+{% for L in letters %}
+  {% set items = indexMap[L] %}
+  {% if items %}
+    <section class="ingredient-index__letter" id="letter-{{ L }}">
+      <h2>{{ L }}</h2>
+    </section>
+    <ul class="ingredient-index__list">
+      {% for name, recipes in items %}
+        <li>
+          <strong>{{ name }}</strong>
+          <span class="ingredient-index__count">({{ recipes | length }})</span>
+          <ul style="list-style:none;padding:0;margin:0.25rem 0 0;">
+            {% for rec in recipes %}<li><a href="{{ rec.url }}">{{ rec.title }}</a></li>{% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
+</div>

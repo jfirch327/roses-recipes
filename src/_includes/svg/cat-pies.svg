@@ -1,0 +1,10 @@
+<svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <ellipse cx="36" cy="46" rx="26" ry="6"/>
+  <path d="M10 46 Q10 30 36 30 Q62 30 62 46"/>
+  <path d="M14 36 L58 36 M20 30 L20 46 M28 30 L28 46 M36 30 L36 46 M44 30 L44 46 M52 30 L52 46"/>
+  <g stroke-opacity="0.7">
+    <path class="steam steam--a" d="M26 24 Q28 20 26 16 Q24 12 26 8"/>
+    <path class="steam steam--b" d="M36 22 Q38 18 36 14 Q34 10 36 6"/>
+    <path class="steam steam--c" d="M46 24 Q48 20 46 16 Q44 12 46 8"/>
+  </g>
+</svg>

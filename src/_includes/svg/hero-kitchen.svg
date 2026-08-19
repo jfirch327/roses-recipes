@@ -1,0 +1,39 @@
+<svg viewBox="0 0 480 380" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Window frame -->
+  <rect x="60" y="30" width="360" height="240" rx="4"/>
+  <line x1="240" y1="30" x2="240" y2="270"/>
+  <line x1="60" y1="150" x2="420" y2="150"/>
+  <!-- View outside: rolling hills and a barn -->
+  <path d="M60 140 Q140 100 240 130 Q340 100 420 140" opacity="0.7"/>
+  <path d="M300 120 L300 138 M320 120 L320 138 M310 108 L310 120 M295 120 L325 120 M295 120 L305 108 L315 108 L325 120" opacity="0.7"/>
+  <!-- Sun -->
+  <circle cx="380" cy="70" r="14" opacity="0.6"/>
+  <line x1="380" y1="46" x2="380" y2="52" opacity="0.6"/>
+  <line x1="380" y1="88" x2="380" y2="94" opacity="0.6"/>
+  <line x1="356" y1="70" x2="362" y2="70" opacity="0.6"/>
+  <line x1="398" y1="70" x2="404" y2="70" opacity="0.6"/>
+  <!-- Windowsill -->
+  <line x1="40" y1="275" x2="440" y2="275"/>
+  <line x1="40" y1="290" x2="440" y2="290"/>
+  <!-- Pie on sill -->
+  <ellipse cx="140" cy="272" rx="42" ry="6"/>
+  <path d="M98 272 Q98 250 140 250 Q182 250 182 272"/>
+  <path d="M104 262 L176 262 M120 254 L120 272 M140 250 L140 272 M160 254 L160 272"/>
+  <g opacity="0.7">
+    <path class="steam steam--a" d="M120 244 Q122 238 120 232 Q118 226 120 220"/>
+    <path class="steam steam--b" d="M140 240 Q142 234 140 228 Q138 222 140 216"/>
+    <path class="steam steam--c" d="M160 244 Q162 238 160 232 Q158 226 160 220"/>
+  </g>
+  <!-- Jar of wildflowers -->
+  <rect x="290" y="240" width="36" height="34" rx="2"/>
+  <line x1="290" y1="248" x2="326" y2="248"/>
+  <path d="M300 240 L295 220 M308 240 L305 210 M316 240 L320 218 M324 240 L326 224"/>
+  <circle cx="295" cy="220" r="3"/>
+  <circle cx="305" cy="210" r="3"/>
+  <circle cx="320" cy="218" r="3"/>
+  <circle cx="326" cy="224" r="3"/>
+  <!-- Welcome tag on twine -->
+  <path d="M60 30 Q180 60 300 30" opacity="0.5" stroke-dasharray="2 4"/>
+  <path d="M200 60 L230 60 L226 76 L204 76 Z"/>
+  <text x="215" y="72" font-family="Caveat, cursive" font-size="12" fill="currentColor" stroke="none" text-anchor="middle">welcome</text>
+</svg>

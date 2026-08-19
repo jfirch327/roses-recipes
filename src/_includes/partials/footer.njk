@@ -1,0 +1,39 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h3>One recipe every Sunday</h3>
+        <div class="newsletter-inline">
+          <p>A short note from the tin box every Sunday morning. Nothing else.</p>
+          <form action="{{ site.waitlist.endpoint }}" method="post">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit">Send me one</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__wide">
+        <h3>Recipe Box</h3>
+        <div class="site-footer__seasons">
+          {% for cat in categories %}
+          <a class="tag" href="/{{ cat.slug }}/">{{ cat.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div>
+        <h3>Seasons</h3>
+        <div class="site-footer__seasons">
+          {% for coll in seasons %}
+          <a class="tag" href="/collections/{{ coll.slug }}/">{{ coll.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer__mark">
+      <span class="glyph">{% svg "wheat-stalk" %}</span>
+      <span class="site-footer__mark-line">{{ site.familyDedication }}</span>
+    </div>
+  </div>
+</footer>

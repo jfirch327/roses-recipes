@@ -1,0 +1,10 @@
+<svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="38" y="52" width="46" height="18" rx="2"/>
+  <rect x="42" y="34" width="42" height="18" rx="2"/>
+  <path d="M44 64 Q52 60 60 64 M64 62 Q72 58 80 62"/>
+  <path d="M48 46 Q54 42 60 46 M64 44 Q72 40 78 44"/>
+  <circle cx="50" cy="38" r="1.4" fill="currentColor" opacity="0.7"/>
+  <circle cx="70" cy="42" r="1.4" fill="currentColor" opacity="0.7"/>
+  <circle cx="58" cy="56" r="1.4" fill="currentColor" opacity="0.7"/>
+  <circle cx="76" cy="60" r="1.4" fill="currentColor" opacity="0.7"/>
+</svg>

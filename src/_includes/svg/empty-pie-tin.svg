@@ -1,0 +1,7 @@
+<svg viewBox="0 0 240 160" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <ellipse cx="90" cy="110" rx="60" ry="10"/>
+  <path d="M30 110 Q30 88 90 88 Q150 88 150 110"/>
+  <ellipse cx="90" cy="88" rx="60" ry="6"/>
+  <path d="M170 60 L215 40 M170 60 Q168 62 170 64 L215 88 Q217 90 219 88 L235 78 Q237 76 235 74 L192 48 Q190 46 188 48 Z"/>
+  <line x1="170" y1="60" x2="188" y2="48"/>
+</svg>

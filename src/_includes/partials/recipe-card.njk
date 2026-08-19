@@ -1,0 +1,22 @@
+{% set r = recipe %}
+{% set sketch = r.data.dishSketch %}
+<a class="card recipe-card reveal"
+   href="{{ r.url }}"
+   data-tags="{{ (r.data.tags or []) | join(' ') }}"
+   data-total="{{ r.data.totalTime or '' }}"
+>
+  <div class="recipe-card__thumb {% if r.data.handwrittenImage %}recipe-card__thumb--photo{% endif %}">
+    {% if r.data.handwrittenImage %}
+      <img src="{{ r.data.handwrittenImage | replace('.jpg', '-thumb.jpg') }}" alt="" loading="lazy" width="640" height="480">
+    {% elif sketch %}
+      {% dish sketch %}
+    {% else %}
+      {% svg "recipe-box" %}
+    {% endif %}
+  </div>
+  <div>
+    <p class="recipe-card__meta">{{ r.data.category | categoryName }}</p>
+    <h3 class="recipe-card__title">{{ r.data.title }}</h3>
+    {% if r.data.description %}<p class="recipe-card__blurb">{{ r.data.description }}</p>{% endif %}
+  </div>
+</a>

@@ -1,0 +1,289 @@
+<svg viewBox="0 0 1600 620" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#3B2A1D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <!-- ============ SKY: sun, clouds, birds ============ -->
+  <circle cx="1320" cy="90" r="26" fill="#E8B84A" fill-opacity="0.55" stroke="#C46B4E" stroke-width="1.2"/>
+  <g stroke="#C46B4E" stroke-width="1.2" opacity="0.55">
+    <line x1="1320" y1="48" x2="1320" y2="56"/>
+    <line x1="1320" y1="124" x2="1320" y2="132"/>
+    <line x1="1278" y1="90" x2="1286" y2="90"/>
+    <line x1="1354" y1="90" x2="1362" y2="90"/>
+    <line x1="1290" y1="60" x2="1296" y2="66"/>
+    <line x1="1344" y1="120" x2="1350" y2="126"/>
+    <line x1="1290" y1="120" x2="1296" y2="114"/>
+    <line x1="1344" y1="60" x2="1350" y2="54"/>
+  </g>
+
+  <!-- Clouds -->
+  <g stroke="#B8695C" stroke-opacity="0.55" fill="none">
+    <path d="M180 120 Q210 100 240 116 Q265 96 300 118 Q330 105 340 128 L180 128 Z"/>
+    <path d="M780 80 Q810 62 840 78 Q870 60 900 80 Q930 68 940 92 L780 92 Z"/>
+    <path d="M1090 160 Q1110 148 1132 162 Q1152 152 1174 168 L1090 168 Z"/>
+  </g>
+
+  <!-- Birds in flight -->
+  <g stroke="#3B2A1D" stroke-width="1.4" fill="none">
+    <path d="M540 140 q6 -8 12 0 q6 -8 12 0"/>
+    <path d="M600 160 q5 -6 10 0 q5 -6 10 0"/>
+    <path d="M660 130 q6 -8 12 0 q6 -8 12 0"/>
+  </g>
+
+  <!-- ============ DISTANT HILLS ============ -->
+  <path d="M0 360 Q160 320 320 348 Q460 372 620 344 Q780 316 920 344 Q1080 372 1240 340 Q1400 312 1600 340 L1600 380 L0 380 Z" fill="#7A9270" fill-opacity="0.25" stroke="#5D7256" stroke-width="1"/>
+  <path d="M0 400 Q180 366 360 388 Q520 408 700 384 Q860 364 1040 388 Q1220 412 1400 384 Q1520 366 1600 384 L1600 420 L0 420 Z" fill="#7A9270" fill-opacity="0.35" stroke="#5D7256" stroke-width="1"/>
+
+  <!-- ============ FIELDS: middle-ground bands ============ -->
+  <rect x="0" y="420" width="1600" height="30" fill="#D4A85A" fill-opacity="0.28"/>
+  <rect x="0" y="450" width="1600" height="170" fill="#7A9270" fill-opacity="0.22"/>
+
+  <!-- Wispy grass in the middle field -->
+  <g stroke="#5D7256" stroke-width="0.9" opacity="0.55">
+    <path d="M60 470 L58 462 M68 472 L70 464 M74 470 L72 462"/>
+    <path d="M180 468 L178 460 M188 470 L190 462"/>
+    <path d="M310 472 L308 464 M318 472 L320 464"/>
+    <path d="M1420 470 L1418 462 M1430 472 L1432 464 M1440 470 L1438 462"/>
+    <path d="M1520 468 L1518 460 M1530 470 L1532 462"/>
+  </g>
+
+  <!-- Wildflowers scattered -->
+  <g>
+    <g transform="translate(90 490)"><circle cx="0" cy="0" r="2" fill="#C46B4E"/><line x1="0" y1="2" x2="0" y2="10" stroke="#5D7256"/></g>
+    <g transform="translate(110 495)"><circle cx="0" cy="0" r="2" fill="#D4A85A"/><line x1="0" y1="2" x2="0" y2="10" stroke="#5D7256"/></g>
+    <g transform="translate(1380 500)"><circle cx="0" cy="0" r="2" fill="#C46B4E"/><line x1="0" y1="2" x2="0" y2="10" stroke="#5D7256"/></g>
+    <g transform="translate(1400 495)"><circle cx="0" cy="0" r="2" fill="#D4A85A"/><line x1="0" y1="2" x2="0" y2="10" stroke="#5D7256"/></g>
+    <g transform="translate(1440 505)"><circle cx="0" cy="0" r="2" fill="#8B3A2E"/><line x1="0" y1="2" x2="0" y2="10" stroke="#5D7256"/></g>
+  </g>
+
+  <!-- ============ POND (middle-left distance) ============ -->
+  <ellipse cx="470" cy="440" rx="70" ry="10" fill="#7A9270" fill-opacity="0.45" stroke="#5D7256" stroke-width="1"/>
+  <ellipse cx="470" cy="438" rx="50" ry="4" fill="#F7F2E8" fill-opacity="0.6" stroke="none"/>
+  <!-- Reeds by the pond -->
+  <g stroke="#5D7256" stroke-width="1">
+    <line x1="540" y1="438" x2="540" y2="424"/><line x1="544" y1="438" x2="546" y2="422"/>
+    <line x1="400" y1="440" x2="400" y2="426"/><line x1="404" y1="440" x2="406" y2="424"/>
+  </g>
+
+  <!-- ============ DIRT PATH curving in from the left ============ -->
+  <path d="M0 620 Q120 580 220 560 Q320 542 380 528 Q440 516 500 512 L520 512" fill="none" stroke="#B8695C" stroke-width="18" stroke-opacity="0.28"/>
+  <path d="M0 620 Q120 580 220 560 Q320 542 380 528 Q440 516 500 512 L520 512" fill="none" stroke="#3B2A1D" stroke-width="1.2" stroke-dasharray="1 6" opacity="0.5"/>
+
+  <!-- ============ CORNFIELD on the far right ============ -->
+  <g stroke="#5D7256" stroke-width="1.1" opacity="0.75">
+    <g id="corn">
+      <line x1="0" y1="0" x2="0" y2="-30"/>
+      <path d="M0 -18 Q-6 -22 -8 -14"/>
+      <path d="M0 -22 Q6 -26 8 -18"/>
+      <path d="M0 -10 Q-5 -14 -7 -8"/>
+      <ellipse cx="0" cy="-30" rx="1.5" ry="4" fill="#D4A85A" fill-opacity="0.7" stroke="#8B3A2E"/>
+    </g>
+  </g>
+  <g stroke="#5D7256" stroke-width="1.1" opacity="0.65">
+    <use href="#corn" x="1220" y="510"/>
+    <use href="#corn" x="1236" y="512"/>
+    <use href="#corn" x="1252" y="510"/>
+    <use href="#corn" x="1268" y="514"/>
+    <use href="#corn" x="1284" y="510"/>
+    <use href="#corn" x="1300" y="512"/>
+    <use href="#corn" x="1316" y="510"/>
+    <use href="#corn" x="1332" y="514"/>
+    <use href="#corn" x="1348" y="512"/>
+    <use href="#corn" x="1364" y="510"/>
+    <use href="#corn" x="1380" y="514"/>
+    <use href="#corn" x="1220" y="536"/>
+    <use href="#corn" x="1240" y="538"/>
+    <use href="#corn" x="1260" y="536"/>
+    <use href="#corn" x="1280" y="540"/>
+    <use href="#corn" x="1300" y="536"/>
+    <use href="#corn" x="1320" y="540"/>
+    <use href="#corn" x="1340" y="536"/>
+    <use href="#corn" x="1360" y="540"/>
+    <use href="#corn" x="1380" y="536"/>
+    <use href="#corn" x="1400" y="540"/>
+    <use href="#corn" x="1420" y="536"/>
+    <use href="#corn" x="1440" y="540"/>
+    <use href="#corn" x="1460" y="536"/>
+    <use href="#corn" x="1480" y="540"/>
+    <use href="#corn" x="1500" y="536"/>
+    <use href="#corn" x="1520" y="540"/>
+    <use href="#corn" x="1540" y="536"/>
+    <use href="#corn" x="1560" y="540"/>
+    <use href="#corn" x="1580" y="536"/>
+    <use href="#corn" x="1220" y="562"/>
+    <use href="#corn" x="1244" y="564"/>
+    <use href="#corn" x="1268" y="562"/>
+    <use href="#corn" x="1292" y="566"/>
+    <use href="#corn" x="1316" y="562"/>
+    <use href="#corn" x="1340" y="566"/>
+    <use href="#corn" x="1364" y="562"/>
+    <use href="#corn" x="1388" y="566"/>
+    <use href="#corn" x="1412" y="562"/>
+    <use href="#corn" x="1436" y="566"/>
+    <use href="#corn" x="1460" y="562"/>
+    <use href="#corn" x="1484" y="566"/>
+    <use href="#corn" x="1508" y="562"/>
+    <use href="#corn" x="1532" y="566"/>
+    <use href="#corn" x="1556" y="562"/>
+    <use href="#corn" x="1580" y="566"/>
+  </g>
+
+  <!-- ============ BARN (center-left) ============ -->
+  <g>
+    <path d="M550 570 L550 430 L640 380 L730 430 L730 570 Z" fill="#8B3A2E" fill-opacity="0.85" stroke="#5B241C" stroke-width="1.6"/>
+    <path d="M550 430 L580 400 L640 380 L700 400 L730 430" stroke="#5B241C" stroke-width="1.6" fill="none"/>
+    <!-- Doors -->
+    <rect x="608" y="490" width="64" height="80" fill="#5B241C" stroke="#3A1712"/>
+    <line x1="640" y1="490" x2="640" y2="570" stroke="#F1E9D6" stroke-width="1.2"/>
+    <path d="M608 510 L672 570 M672 510 L608 570" stroke="#F1E9D6" stroke-width="1.4" fill="none"/>
+    <!-- Hayloft window -->
+    <rect x="625" y="418" width="30" height="30" fill="#F1E9D6" stroke="#3A1712"/>
+    <line x1="640" y1="418" x2="640" y2="448" stroke="#3A1712" stroke-width="1"/>
+    <line x1="625" y1="433" x2="655" y2="433" stroke="#3A1712" stroke-width="1"/>
+    <!-- Cupola -->
+    <rect x="632" y="356" width="16" height="20" fill="#5B241C"/>
+    <path d="M628 356 L640 340 L652 356 Z" fill="#5B241C"/>
+    <line x1="640" y1="340" x2="640" y2="326" stroke="#5B241C"/>
+    <circle cx="640" cy="326" r="2" fill="#D4A85A" stroke="#5B241C"/>
+    <!-- Small side windows -->
+    <rect x="568" y="480" width="14" height="16" fill="#F1E9D6" stroke="#3A1712"/>
+    <rect x="698" y="480" width="14" height="16" fill="#F1E9D6" stroke="#3A1712"/>
+  </g>
+
+  <!-- Silo -->
+  <g>
+    <path d="M760 570 L760 420 Q760 402 780 402 Q800 402 800 420 L800 570 Z" fill="#B8695C" fill-opacity="0.85" stroke="#5B241C" stroke-width="1.4"/>
+    <ellipse cx="780" cy="402" rx="20" ry="8" fill="#8B3A2E" stroke="#5B241C" stroke-width="1.4"/>
+    <line x1="760" y1="440" x2="800" y2="440" stroke="#5B241C" opacity="0.7"/>
+    <line x1="760" y1="480" x2="800" y2="480" stroke="#5B241C" opacity="0.7"/>
+    <line x1="760" y1="520" x2="800" y2="520" stroke="#5B241C" opacity="0.7"/>
+  </g>
+
+  <!-- ============ FENCE line (barn <-> farmhouse) ============ -->
+  <g stroke="#3B2A1D" opacity="0.7">
+    <line x1="820" y1="522" x2="1010" y2="522"/>
+    <line x1="820" y1="540" x2="1010" y2="540"/>
+    <line x1="835" y1="515" x2="835" y2="555"/>
+    <line x1="865" y1="515" x2="865" y2="555"/>
+    <line x1="895" y1="515" x2="895" y2="555"/>
+    <line x1="925" y1="515" x2="925" y2="555"/>
+    <line x1="955" y1="515" x2="955" y2="555"/>
+    <line x1="985" y1="515" x2="985" y2="555"/>
+  </g>
+
+  <!-- ============ FARMHOUSE (center-right) ============ -->
+  <g>
+    <rect x="1010" y="480" width="180" height="90" fill="#B8695C" fill-opacity="0.9" stroke="#5B241C" stroke-width="1.6"/>
+    <path d="M998 480 L1100 400 L1202 480 Z" fill="#8B3A2E" stroke="#5B241C" stroke-width="1.6"/>
+    <rect x="1150" y="424" width="16" height="40" fill="#5B241C"/>
+    <line x1="1150" y1="434" x2="1166" y2="434" stroke="#3A1712"/>
+    <!-- Porch -->
+    <rect x="1010" y="560" width="180" height="18" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="1024" y1="560" x2="1024" y2="536" stroke="#5B241C"/>
+    <line x1="1176" y1="560" x2="1176" y2="536" stroke="#5B241C"/>
+    <path d="M1020 536 L1180 536" stroke="#5B241C"/>
+    <!-- Front door -->
+    <rect x="1085" y="518" width="30" height="42" fill="#5B241C" stroke="#3A1712"/>
+    <circle cx="1108" cy="540" r="1.4" fill="#F1E9D6"/>
+    <!-- Downstairs windows -->
+    <rect x="1030" y="510" width="30" height="30" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="1045" y1="510" x2="1045" y2="540" stroke="#5B241C"/>
+    <line x1="1030" y1="525" x2="1060" y2="525" stroke="#5B241C"/>
+    <rect x="1140" y="510" width="30" height="30" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="1155" y1="510" x2="1155" y2="540" stroke="#5B241C"/>
+    <line x1="1140" y1="525" x2="1170" y2="525" stroke="#5B241C"/>
+    <!-- Upstairs gable window -->
+    <rect x="1088" y="440" width="24" height="30" fill="#F1E9D6" stroke="#5B241C"/>
+    <line x1="1100" y1="440" x2="1100" y2="470" stroke="#5B241C"/>
+    <!-- Cat sitting on the porch step -->
+    <g transform="translate(1046 552)">
+      <path d="M0 6 Q0 0 6 0 Q12 0 12 6 L12 10 L0 10 Z" fill="#3B2A1D"/>
+      <path d="M0 0 L2 -4 L4 0 M8 0 L10 -4 L12 0" fill="#3B2A1D"/>
+      <path d="M12 6 Q18 4 20 8" stroke="#3B2A1D"/>
+      <circle cx="4" cy="4" r="0.6" fill="#F7F2E8"/>
+      <circle cx="8" cy="4" r="0.6" fill="#F7F2E8"/>
+    </g>
+  </g>
+
+  <!-- Big tree right of farmhouse -->
+  <g>
+    <path d="M1240 570 L1240 490" stroke="#3B2A1D" stroke-width="3"/>
+    <circle cx="1240" cy="472" r="34" fill="#7A9270" fill-opacity="0.85" stroke="#5D7256"/>
+    <circle cx="1218" cy="486" r="24" fill="#7A9270" fill-opacity="0.7" stroke="#5D7256"/>
+    <circle cx="1262" cy="486" r="24" fill="#7A9270" fill-opacity="0.7" stroke="#5D7256"/>
+  </g>
+
+  <!-- ============ ANIMALS ============ -->
+  <!-- Chickens near the barn (bottom left of barn) -->
+  <g stroke="#3B2A1D" stroke-width="1.2">
+    <g transform="translate(526 580)">
+      <ellipse cx="0" cy="0" rx="8" ry="6" fill="#F1E9D6"/>
+      <circle cx="8" cy="-6" r="4" fill="#F1E9D6"/>
+      <path d="M11 -8 L14 -12" stroke="#C46B4E"/>
+      <path d="M12 -5 L15 -5" stroke="#D4A85A" stroke-width="1.4"/>
+      <line x1="-3" y1="5" x2="-3" y2="10"/>
+      <line x1="3" y1="5" x2="3" y2="10"/>
+    </g>
+    <g transform="translate(496 588)">
+      <ellipse cx="0" cy="0" rx="7" ry="5" fill="#F1E9D6"/>
+      <circle cx="7" cy="-5" r="3.5" fill="#F1E9D6"/>
+      <path d="M9 -7 L12 -10" stroke="#C46B4E"/>
+      <path d="M10 -4 L12 -4" stroke="#D4A85A" stroke-width="1.4"/>
+      <line x1="-2" y1="4" x2="-2" y2="8"/>
+      <line x1="2" y1="4" x2="2" y2="8"/>
+    </g>
+    <g transform="translate(510 596)">
+      <ellipse cx="0" cy="0" rx="6" ry="4" fill="#F1E9D6"/>
+      <circle cx="6" cy="-4" r="3" fill="#F1E9D6"/>
+      <path d="M8 -6 L10 -8" stroke="#C46B4E"/>
+      <line x1="-2" y1="3" x2="-2" y2="6"/>
+      <line x1="2" y1="3" x2="2" y2="6"/>
+    </g>
+  </g>
+
+  <!-- Cow grazing in the field (center-left, in the pond area but out on grass) -->
+  <g stroke="#3B2A1D" stroke-width="1.2">
+    <g transform="translate(340 520)">
+      <path d="M-24 0 L24 0 Q30 0 30 6 L30 10 Q30 12 28 12 L-28 12 Q-30 12 -30 10 L-30 6 Q-30 0 -24 0 Z" fill="#F1E9D6"/>
+      <!-- Cow spots -->
+      <path d="M-14 3 Q-8 2 -6 6 Q-10 8 -14 6 Z" fill="#3B2A1D"/>
+      <path d="M4 4 Q10 3 12 8 Q6 10 4 7 Z" fill="#3B2A1D"/>
+      <!-- Head -->
+      <path d="M28 -2 Q40 -6 42 4 Q42 10 34 10 L28 10 Z" fill="#F1E9D6"/>
+      <path d="M40 -4 Q42 -8 44 -6 M42 -2 Q46 -4 48 -2" stroke="#3B2A1D"/>
+      <!-- Legs -->
+      <line x1="-22" y1="12" x2="-22" y2="22"/>
+      <line x1="-10" y1="12" x2="-10" y2="22"/>
+      <line x1="8" y1="12" x2="8" y2="22"/>
+      <line x1="22" y1="12" x2="22" y2="22"/>
+      <!-- Tail -->
+      <path d="M-30 4 Q-38 8 -34 14"/>
+    </g>
+  </g>
+
+  <!-- A second, distant cow -->
+  <g stroke="#3B2A1D" stroke-width="1.0" opacity="0.85">
+    <g transform="translate(880 470)">
+      <ellipse cx="0" cy="0" rx="14" ry="4" fill="#F1E9D6"/>
+      <path d="M-7 -1 Q-4 -3 -2 -1" fill="#3B2A1D"/>
+      <path d="M14 -1 Q19 -3 20 1 L18 4 Z" fill="#F1E9D6"/>
+      <line x1="-10" y1="4" x2="-10" y2="9"/>
+      <line x1="10" y1="4" x2="10" y2="9"/>
+    </g>
+  </g>
+
+  <!-- ============ GROUND line ============ -->
+  <path d="M0 570 L1600 570" stroke="#3B2A1D" stroke-width="1.4" opacity="0.6"/>
+
+  <!-- Grass tufts along the ground -->
+  <g stroke="#5D7256" stroke-width="1" opacity="0.75">
+    <path d="M100 575 L98 568 M106 576 L108 570 M104 578 L104 572"/>
+    <path d="M420 575 L418 568 M426 576 L428 570"/>
+    <path d="M840 575 L838 568 M846 576 L848 570 M844 578 L844 572"/>
+    <path d="M1220 575 L1218 568 M1226 576 L1228 570"/>
+    <path d="M1520 575 L1518 568 M1526 576 L1528 570"/>
+  </g>
+
+  <!-- A fence post outrider on the far left, warm detail -->
+  <g stroke="#3B2A1D" opacity="0.55">
+    <line x1="60" y1="558" x2="60" y2="590"/>
+    <line x1="52" y1="566" x2="68" y2="566"/>
+    <line x1="52" y1="574" x2="68" y2="574"/>
+  </g>
+</svg>

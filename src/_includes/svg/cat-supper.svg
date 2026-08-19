@@ -1,0 +1,6 @@
+<svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M12 40 Q12 30 24 28 L48 28 Q60 30 60 40 L60 46 Q60 50 56 50 L16 50 Q12 50 12 46 Z"/>
+  <line x1="8" y1="52" x2="64" y2="52"/>
+  <path d="M30 24 L30 20 M36 24 L36 18 M42 24 L42 20"/>
+  <circle cx="36" cy="14" r="2"/>
+</svg>

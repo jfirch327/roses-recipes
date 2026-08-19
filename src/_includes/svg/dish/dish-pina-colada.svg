@@ -1,0 +1,12 @@
+<svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <ellipse cx="60" cy="78" rx="42" ry="5"/>
+  <path d="M22 78 Q22 74 26 72 L94 72 Q98 74 98 78"/>
+  <path d="M36 72 L36 40 Q36 36 40 34 L80 34 Q84 36 84 40 L84 72 Z"/>
+  <line x1="36" y1="50" x2="84" y2="50"/>
+  <line x1="36" y1="60" x2="84" y2="60"/>
+  <path d="M36 40 Q44 36 52 40 T68 40 T84 40" opacity="0.7"/>
+  <path d="M36 50 Q44 46 52 50 T68 50 T84 50" opacity="0.7"/>
+  <path d="M36 60 Q44 56 52 60 T68 60 T84 60" opacity="0.7"/>
+  <circle cx="60" cy="30" r="3"/>
+  <path d="M60 27 L60 22 Q62 20 64 22"/>
+</svg>

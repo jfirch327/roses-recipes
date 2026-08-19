@@ -1,0 +1,105 @@
+---
+layout: layouts/base.njk
+permalink: /
+title: false
+description: "Grandma Rose's Recipes. Handwritten family recipes from a midwestern Ohio farm kitchen, typed out for the family to share and use."
+---
+{% set featured = (collections.recipe | featuredOne) or collections.recentRecipes[0] %}
+
+<section class="hero-scene">
+  <div class="hero-scene__scene" aria-hidden="true">
+    {% if site.heroImage %}
+      <img src="{{ site.heroImage }}" alt="{{ site.heroImageAlt }}" loading="eager">
+    {% else %}
+      {% svg "hero-farm" %}
+    {% endif %}
+  </div>
+  <div class="hero-scene__inner wrap">
+    <div class="hero-scene__copy">
+      <p class="hero__eyebrow">A family recipe box</p>
+      <h1 class="display">The Tin Box on the Shelf</h1>
+      <p class="dedication">Handwritten recipes from a midwestern Ohio farm kitchen. Kept in a tin box on the shelf above the flour bin, and now here for the family to share.</p>
+      <span class="byline">from Grandma Rose's kitchen in midwestern Ohio</span>
+      <div class="hero__actions">
+        <a class="btn" href="/recipe-box/"><span>Open the recipe box</span></a>
+        <a class="btn btn--secondary" href="/about/"><span>About Rose</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band band--linen">
+<section class="wrap">
+  {% if featured %}
+  <div class="featured reveal">
+    <div class="featured__dish" aria-hidden="true">
+      {% if featured.data.dishSketch %}{% dish featured.data.dishSketch %}{% else %}{% svg "recipe-box" %}{% endif %}
+    </div>
+    <div>
+      <p class="featured__eyebrow">This week from the tin box</p>
+      <h2 class="featured__title"><a href="{{ featured.url }}" style="color:inherit;text-decoration:none;">{{ featured.data.title }}</a></h2>
+      <p class="featured__quote">{{ featured.data.description }}</p>
+      <a class="btn btn--secondary" href="{{ featured.url }}"><span>Read the recipe</span></a>
+    </div>
+  </div>
+  {% endif %}
+</section>
+</div>
+
+<div class="band band--cream">
+<section class="wrap">
+  <div class="section-title">
+    <p class="eyebrow">Recently added</p>
+    <h2>From the tin box</h2>
+    <p class="muted">The newest cards Rose's family has typed out.</p>
+  </div>
+  <div class="tile-grid">
+    {% for r in collections.recentRecipes %}
+      {% set recipe = r %}
+      {% include "partials/recipe-card.njk" %}
+    {% endfor %}
+  </div>
+</section>
+</div>
+
+<div class="band band--linen">
+<section class="wrap">
+  <div class="section-title">
+    <p class="eyebrow">By the meal, by the pan</p>
+    <h2>Browse the recipe box</h2>
+    <p class="muted">Fifteen drawers, organized the way Rose would have.</p>
+  </div>
+  <div class="tile-grid">
+    {% for cat in categories %}
+    {% set count = (collections.recipe | recipesIn(cat.slug)) | length %}
+    <a class="card category-tile reveal" href="/{{ cat.slug }}/">
+      <div class="category-tile__glyph">{% svg cat.glyph %}</div>
+      <p class="category-tile__group">{{ cat.group }}</p>
+      <h3 class="category-tile__name">{{ cat.name }}</h3>
+      <p class="category-tile__count">{{ count }} {% if count == 1 %}recipe{% else %}recipes{% endif %}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+</div>
+
+<div class="band band--cream">
+<section class="wrap-narrow">
+  <div class="landing-hero">
+    <p class="eyebrow">Coming when it's ready</p>
+    <h2 class="display">Grandma Rose's Classic Midwestern Cookbook</h2>
+    <div class="landing-hero__mockup">{% svg "cookbook-mockup" %}</div>
+    <p class="dedication">Every recipe on the site, bound together with the notes Rose left in the margins. Coming when it's ready.</p>
+    <p><a class="btn" href="/cookbook/"><span>Join the waitlist</span></a></p>
+  </div>
+</section>
+</div>
+
+<div class="band band--linen">
+<section class="wrap-narrow center">
+  <p class="eyebrow">The family behind the recipes</p>
+  <h2>Who Rose was</h2>
+  <p>Rose kept her recipes in a tin box on the shelf above the flour bin. Most were written on the backs of feed store receipts. A few came from her mother, more came from neighbors, and the rest she worked out on her own over the years.</p>
+  <p><a class="btn btn--ghost" href="/about/">Read the whole story →</a></p>
+</section>
+</div>

@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+permalink: /recipe-box/
+title: "The Recipe Box"
+description: "Every recipe from Grandma Rose's tin box, organized by meal, by baking, and by pantry. A family collection from midwestern Ohio."
+---
+<section class="wrap-narrow center">
+  <p class="subtitle">From the tin box</p>
+  <h1 class="display">The Recipe Box</h1>
+  <p>Every card Rose kept, typed out and sorted the way she'd have done it herself. The original tin sat on the shelf above her flour bin for close to sixty years, holding cards on feed store receipts and index cards from the drug store on Main. What's here is the whole box, pulled onto the counter so the family can cook out of it whenever they like.</p>
+</section>
+
+<section class="wrap">
+  {% set groups = ["Meals", "Baking", "Pantry"] %}
+  {% for grp in groups %}
+    <h2 class="group-heading">{{ grp }}</h2>
+    <div class="tile-grid" style="margin-bottom:2.5rem;">
+      {% for cat in categories %}
+        {% if cat.group == grp %}
+          {% set count = (collections.recipe | recipesIn(cat.slug)) | length %}
+          <a class="card category-tile reveal" href="/{{ cat.slug }}/">
+            <div class="category-tile__glyph">{% svg cat.glyph %}</div>
+            <h3 class="category-tile__name">{{ cat.name }}</h3>
+            <p class="category-tile__count">{{ count }} {% if count == 1 %}recipe{% else %}recipes{% endif %}</p>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</section>
+
+<div class="sprig-rule" aria-hidden="true">{% svg "sprig" %}</div>
+
+<section class="wrap">
+  <div class="section-title">
+    <h2>Every recipe in the box</h2>
+    <p class="muted">All {{ collections.recipe | length }} of them, in one place.</p>
+  </div>
+  <div class="tile-grid">
+    {% for r in collections.recipe %}
+      {% set recipe = r %}
+      {% include "partials/recipe-card.njk" %}
+    {% endfor %}
+  </div>
+</section>
+
+<div class="wrap-narrow">
+  {% include "partials/cookbook-cta.njk" %}
+</div>

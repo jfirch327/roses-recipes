@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+permalink: /collections/
+title: "Seasonal collections"
+description: "Cross-category collections from Grandma Rose's kitchen. Holiday dishes, Sunday supper, potluck standbys, and canning season."
+---
+<section class="wrap-narrow center">
+  <p class="subtitle">Seasonal</p>
+  <h1>Collections</h1>
+  <p class="lede muted">Cross-category collections pulled from the tin box. What the family expects at holidays, on Sunday afternoons, at potlucks, and through canning season.</p>
+</section>
+
+<section class="wrap">
+  <div class="tile-grid">
+    {% for coll in seasons %}
+    <a class="card category-tile reveal" href="/collections/{{ coll.slug }}/">
+      <div class="category-tile__glyph">{% svg coll.glyph %}</div>
+      <h2 class="category-tile__name">{{ coll.name }}</h2>
+      <p class="category-tile__group">A seasonal collection</p>
+      <p class="recipe-card__blurb">{{ coll.blurb }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>

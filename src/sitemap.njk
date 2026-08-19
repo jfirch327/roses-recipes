@@ -1,0 +1,24 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ site.url }}/</loc></url>
+  <url><loc>{{ site.url }}/about/</loc></url>
+  <url><loc>{{ site.url }}/recipe-box/</loc></url>
+  <url><loc>{{ site.url }}/cookbook/</loc></url>
+  <url><loc>{{ site.url }}/collections/</loc></url>
+  {% for cat in categories %}
+  <url><loc>{{ site.url }}/{{ cat.slug }}/</loc></url>
+  {% endfor %}
+  {% for coll in seasons %}
+  <url><loc>{{ site.url }}/collections/{{ coll.slug }}/</loc></url>
+  {% endfor %}
+  {%- for r in collections.recipe %}
+  <url>
+    <loc>{{ site.url }}{{ r.url }}</loc>
+    {% if r.data.datePublished %}<lastmod>{{ r.data.datePublished | isoDate }}</lastmod>{% endif %}
+  </url>
+  {%- endfor %}
+</urlset>

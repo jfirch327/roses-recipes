@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+title: "This page took a wrong turn"
+description: "The page you're looking for isn't in the tin box. Head back to the recipe box or the home page."
+eleventyExcludeFromCollections: true
+---
+<section class="wrap-narrow center" style="padding:4rem 1rem;">
+  <div style="max-width:320px;margin:0 auto 2rem;color:var(--red-faded);">{% svg "empty-pie-tin" %}</div>
+  <p class="subtitle">Wrong drawer</p>
+  <h1 class="display">This page took a wrong turn</h1>
+  <p class="lede muted">The card you're looking for isn't in the tin box. It may have moved, or the address may have a typo.</p>
+  <div class="hero__actions" style="justify-content:center;">
+    <a class="btn" href="/"><span>Back to the home page</span></a>
+    <a class="btn btn--secondary" href="/recipe-box/"><span>Open the recipe box</span></a>
+  </div>
+</section>

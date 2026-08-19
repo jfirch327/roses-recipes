@@ -1,0 +1,11 @@
+<svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <ellipse cx="60" cy="74" rx="46" ry="4"/>
+  <path d="M14 74 L14 70 L106 70 L106 74"/>
+  <path d="M22 70 Q22 40 60 36 Q98 40 98 70"/>
+  <path d="M22 70 L98 70"/>
+  <path d="M32 52 L44 52 M52 50 L64 50 M72 52 L84 52" opacity="0.7"/>
+  <circle cx="38" cy="60" r="1.4" opacity="0.7"/>
+  <circle cx="52" cy="58" r="1.4" opacity="0.7"/>
+  <circle cx="68" cy="60" r="1.4" opacity="0.7"/>
+  <circle cx="82" cy="58" r="1.4" opacity="0.7"/>
+</svg>

@@ -1,0 +1,31 @@
+{# Prose-style internal linking block. Renders after the notes on every recipe.
+   Uses the recipe's category, tags, and one related recipe as anchor text. #}
+{% set catSlug = category %}
+{% set catName = catSlug | categoryName %}
+{% set tagsArr = tags or [] %}
+{% set peer = (collections.recipe | related(catSlug, tagsArr, page.url, 1))[0] %}
+
+<section class="see-also reveal" aria-labelledby="see-also-heading">
+  <h2 id="see-also-heading">You'll also find in the tin box</h2>
+  <p>
+    This one lives in the <a href="/{{ catSlug }}/">{{ catName | lower }} drawer</a>
+    of the <a href="/recipe-box/">recipe box</a>{% if peer %}, right next to
+    <a href="{{ peer.url }}">{{ peer.data.title }}</a>{% endif %}. If a
+    cousin's coming over on short notice and you need a whole meal from
+    Rose's kitchen, the <a href="/recipe-box/">recipe box</a> is where to
+    start.
+  </p>
+  {% if tagsArr | length %}
+  <p>
+    Rose kept this recipe with the ones the family expected at
+    {% for tag in tagsArr %}{% if tag != "recipe" %}<a href="/collections/{{ tag }}/">{{ tag | collectionName | lower }}</a>{% if not loop.last %} and {% endif %}{% endif %}{% endfor %}
+    time, so it'll show up in those seasonal collections whenever you're
+    planning ahead.
+  </p>
+  {% endif %}
+  <p>
+    Cooking by what's already on your shelf? Every ingredient across every
+    card sits in the <a href="/ingredient-index/">ingredient index</a>,
+    so you can start from the pantry and work backward to the recipe.
+  </p>
+</section>
